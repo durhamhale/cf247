@@ -112,3 +112,11 @@ Returns the customer record with the provided ID.
 ```
 (empty)
 ```
+
+## Docker
+
+To run in the dockerized dev environment run `docker-compose up`
+
+## Sample web requests
+
+A [Postman](https://www.getpostman.com/) collection of all the available endpoints can be found in the root of the project in the file `CF247.postman_collection.json`
