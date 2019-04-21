@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+
+  webapi:
+    image: durhamhale/cf247-web-api:develop
+    container_name: durhamhale_cf247_web_api_develop 
+    build:
+      context: CustomersApi
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongodb
+ 
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
